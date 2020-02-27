@@ -1,3 +1,5 @@
+const siteContent = require('./content/index.js')
+console.log(siteContent, '')
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -5,6 +7,7 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

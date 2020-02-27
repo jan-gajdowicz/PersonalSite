@@ -14,18 +14,15 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
+  query MyPokemonQuery {
+    skills
+  }
   `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {JSON.stringify(data.skills)}
+      {/* <Header siteTitle={data.allPokemon.nodes} /> */}
       <div
         style={{
           margin: `0 auto`,
