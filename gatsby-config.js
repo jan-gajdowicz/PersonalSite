@@ -1,5 +1,3 @@
-const siteContent = require('./content/index.js')
-console.log(siteContent, '')
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -18,6 +16,17 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Roboto Mono`,
+            variants: [`100`, `300`, `700`]
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
